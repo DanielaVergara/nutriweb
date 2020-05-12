@@ -21,12 +21,12 @@ Vue.use(VueRouter)
   {
     path: '/register',
     name: 'Register',
-    component: () => import('../views/Register.vue')
+    component: () => import('../views/public-layout/Register.vue')
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../views/Login.vue')
+    component: () => import('../views/public-layout/Login.vue')
   }
 ]
 
