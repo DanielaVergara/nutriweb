@@ -1,7 +1,5 @@
 <template>
     <div>
-        <LoginHeaderComponent/>
-
         <LoginBodyComponent/>
     </div>
 </template>

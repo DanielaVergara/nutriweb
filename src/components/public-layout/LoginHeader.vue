@@ -1,8 +1,9 @@
 <template>
-    <header>
-        <h3>Nutriweb</h3>
-        <br>
-    </header>
+    <nav>
+        <div class="nav-wrapper #ffffff white">
+            <a href="" class="brand-logo #d84315 deep-orange-text darken-3-text"><strong>NutriWeb</strong></a>
+        </div>
+    </nav>
 </template>
 
 <script lang="ts">
