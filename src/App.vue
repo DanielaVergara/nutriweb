@@ -1,21 +1,26 @@
 <template>
   <div id="app">
     <HeaderMainComponent />
+            <router-view/>
+    <AboutComponent/>
+    <CommentsComponent/>
    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/register">Register</router-link> |
        <router-link to="/login">Login</router-link>
     </div>-->
-    <router-view/>
-
   </div>
 </template>
 <script lang="ts">
 import HeaderMainComponent from './components/public-layout/HeaderMain.vue'
+import CommentsComponent from './components/public-layout/Comments.vue'
+import AboutComponent from './components/public-layout/About.vue'
 export default{
     components:{
         HeaderMainComponent,
+        CommentsComponent,
+        AboutComponent,
     },
 }
 
