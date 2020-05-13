@@ -38,6 +38,12 @@ Vue.use(VueRouter)
     name: 'SignUp',
     component: () => import('../views/public-layout/SignUp.vue')
   }
+  ,
+  {
+    path: '/contacts',
+    name: 'Contacts',
+    component: () => import('../views/public-layout/Contacts.vue')
+  }
 ]
 
 const router = new VueRouter({

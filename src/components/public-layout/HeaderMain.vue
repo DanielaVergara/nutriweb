@@ -3,11 +3,11 @@
         <div class="nav-wrapper #ffffff white">
             <a href="" class="brand-logo #d84315 deep-orange-text darken-3-text"><strong>NutriWeb</strong></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="" class="#000000 black-text">Inicio</a></li>
+            <li><router-link class="#000000 black-text" to="/">Inicio</router-link></li>
             <li><router-link class="#000000 black-text" to="/signup">Empieza aquí</router-link></li>
             <li><router-link class="#000000 black-text" to="/about">Acerca de</router-link></li>
             <li><router-link class="#000000 black-text" to="/comments">Comentarios</router-link></li>
-            <li><a href="" class="#000000 black-text">Contáctenos</a></li>
+            <li><router-link class="#000000 black-text" to="/contacts">Contáctenos</router-link></li>
             <li>
                 <router-link  class="waves-effect waves-light btn" to="/login">Ingresar
                 <i class="material-icons right">person </i>

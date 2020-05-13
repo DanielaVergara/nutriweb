@@ -3,7 +3,7 @@
         <div class="col s3">
         </div>
         <div class="col s6 teal lighten-5 z-depth-4">
-            <h5 style="font-weight:bold;">EMPIEZA AQUÍ</h5>
+            <h5 style="font-weight:bold;text-align:center">EMPIEZA AQUÍ</h5>
             <div style="margin:15px;" class="row">
                 <div class="input-field col s6">
                     <div class="input-field line">
@@ -47,7 +47,7 @@
                         <label for="email">Ingrese su correo</label>
                     </div>
                 </div>
-                <div class="col s12">
+                <div class="col s12" style="text-align:center">
                     <button class="btn waves-effect waves-light teal" type="submit" name="action">Continuar
                         <i class="material-icons right">send</i>
                     </button>

@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col s3">
             </div>
-            <div id="sct-login" class="col s6 blue lighten-5">
-                <h5>INICIAR SESIÓN</h5>
+            <div id="sct-login" class="col s8 blue lighten-5  z-depth-4 ">
+                <h5  style="font-weight:bold;text-align:center">INICIAR SESIÓN</h5>
                 <div class="row">
                     <div class="input-field col s6">
                         <div class="input-field inline">
@@ -20,14 +20,13 @@
                             <label for="password">Ingrese la contraseña</label>
                         </div>
                     </div>
-                    <div class="col s12">
+                    <div class="col s12" style="text-align:center">
                         <label>
                         <input type="checkbox" />
                         <span>Recordarme</span>
                     </label>
                     </div>
-                    <div class="col s12">
-                        <br>
+                    <div class="col s12" style="padding:30px; text-align:center">
                         <button class="btn waves-effect waves-light black" type="submit" name="action">INGRESAR
                             <i class="material-icons right">send</i>
                         </button>
