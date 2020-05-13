@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <HeaderMainComponent />
-            <router-view/>
-    <AboutComponent/>
-    <CommentsComponent/>
+     <router-view style="padding:40px" >      
+      </router-view>
    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |

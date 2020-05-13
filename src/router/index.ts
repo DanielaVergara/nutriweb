@@ -20,6 +20,24 @@ Vue.use(VueRouter)
     name: 'Login',
     component: () => import('../views/public-layout/Login.vue')
   }
+  ,
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/public-layout/About.vue')
+  }
+  ,
+  {
+    path: '/comments',
+    name: 'Comments',
+    component: () => import('../views/public-layout/Comments.vue')
+  }
+  ,
+  {
+    path: '/signup',
+    name: 'SignUp',
+    component: () => import('../views/public-layout/SignUp.vue')
+  }
 ]
 
 const router = new VueRouter({

@@ -1,7 +1,6 @@
 <template>
     <div class="row">
         <div class="col s3">
-
         </div>
         <div class="col s6 teal lighten-5 z-depth-4">
             <h5 style="font-weight:bold;">EMPIEZA AQUÍ</h5>
@@ -60,3 +59,11 @@
         </div>
     </div>
 </template>
+<script lang="ts">
+import {Vue, Component, Prop} from 'vue-property-decorator'
+
+@Component
+export default class SignUpComponent extends Vue{
+
+}
+</script>
