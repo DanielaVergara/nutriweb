@@ -1,9 +1,9 @@
 <template>
-  <div class="row">
+  <div id="contacts" class="row" style="color:white;">
     <div class="col s3"></div>
-    <div class="col s6  #e8eaf6 indigo lighten-5">
-      <h5 style="font-weight:bold;text-align:center">CONTÁCTENOS</h5>
-      <div style="margin:15px;" class="row">
+    <div class="col s6 cyan darken-4" style="border-radius:3px;">
+      <h5 style="font-weight:bold;text-align:center;">CONTÁCTENOS</h5>
+      <div style="margin:15px; " class="row">
         <div class="input-field col s12">
             <p>
                 Escribe todas las inquietudes, quejas o reclamos junto con tu correo.
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="col s12" style="text-align:center">
-          <button class="btn waves-effect waves-light #7986cb indigo lighten-2" type="submit" name="action">
+          <button class="btn waves-effect waves-light cyan accent-4" type="submit" name="action">
             Enviar
             <i class="material-icons right">send</i>
           </button>

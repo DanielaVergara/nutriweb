@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div id="comments" class="container">
         <div class="row">
             <div class="col s12">
                 <h4 class="header">Comentarios</h4>

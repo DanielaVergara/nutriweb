@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div id="about" class="container">
         <div class="row">
             <div class="col s12">
                 <h5>Acerca de</h5>
@@ -48,7 +48,6 @@
                             Facilisi quisque leo luctus cras condimentum convallis hac cursus ultricies fermentum, parturient velit risus pellentesque eros mi nunc lobortis potenti, non per dapibus pharetra dis ridiculus magnis morbi eleifend.</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
                         <a href="#">This is a link</a>
                     </div>
                 </div>
