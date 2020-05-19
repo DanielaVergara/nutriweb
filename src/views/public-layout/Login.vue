@@ -1,5 +1,6 @@
 <template>
     <div>
+        <LoginHeaderComponent/>
         <LoginBodyComponent/>
     </div>
 </template>
@@ -15,3 +16,6 @@ export default{
 }
 
 </script>
+<style>
+
+</style>

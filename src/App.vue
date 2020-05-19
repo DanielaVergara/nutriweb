@@ -7,16 +7,8 @@
        <router-link to="/login">Login</router-link>-->
        
     </div>
-    <router-view/>
     <div class="container-fluid">
-      <HeaderMainComponent/>
-      <BannerComponent/>
-      <br>
-      <SignUpComponent/>
-      <AboutComponent/>
-      <CommentsComponent/>
-      <ContactsComponent/>
-      <FooterMainComponent/> 
+      <router-view/>
     </div> 
   </div>
 </template>

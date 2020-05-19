@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="nav-wrapper #ffffff white">
+        <div class="nav-wrapper white">
             <a href="" class="brand-logo #d84315 deep-orange-text darken-3-text"><strong>NutriWeb</strong></a>
         </div>
     </nav>

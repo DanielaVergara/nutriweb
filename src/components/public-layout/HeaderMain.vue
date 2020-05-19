@@ -15,7 +15,7 @@
                         </router-link>   
                     </li>
                     <li>
-                        <a class="waves-light btn #66bb6a green lighten-1">
+                        <a href="#signup" class="waves-light btn #66bb6a green lighten-1">
                         REGISTRAR <i class="material-icons right">person_add
                         </i></a>
                     </li>   
@@ -35,7 +35,7 @@ export default class HeaderMain extends Vue{
 </script>
 
 <style>
-*{
-    scroll-behavior: smooth;
-}
+    *{
+        scroll-behavior: smooth;
+    }
 </style>
