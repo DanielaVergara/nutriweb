@@ -24,6 +24,11 @@ Vue.use(VueRouter)
     path: '/register',
     name: 'register',
     component: () => import('../views/public-layout/Register.vue')
+  },
+  {
+    path: '/planuser',
+    name: 'planuser',
+    component: () => import('../views/logued-layout/Plans.vue')
   }
 ]
 

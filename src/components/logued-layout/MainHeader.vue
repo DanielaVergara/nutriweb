@@ -2,7 +2,9 @@
     <div class="row deep-orange-text darken-3-text">
         <nav>
             <div class="col s8 m8">
-                <strong class="brand-logo white-text">NutriWeb</strong>
+                   <router-link  to="/" class="brand-logo #d84315 deep-orange-text darken-3-text">
+                    <strong>NutriWeb</strong>
+                  </router-link>
             </div>
             <div class="col s2 m2">
                 ¡Bienvenido <strong>{{user.name}} {{user.lastName}}</strong>!

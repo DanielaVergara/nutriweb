@@ -2,7 +2,9 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper #ffffff white">
-                <a href="" class="brand-logo #d84315 deep-orange-text darken-3-text"><strong>NutriWeb</strong></a>
+                  <router-link  to="/" class="brand-logo #d84315 deep-orange-text darken-3-text">
+                    <strong>NutriWeb</strong>
+                  </router-link>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="#000000 black-text" href="#home">Inicio</a></li>
                     <li><a class="#000000 black-text" href="#about">Acerca de</a></li>

@@ -43,6 +43,7 @@
               id="height"
               placeholder="En centimetros"
               class="validate"
+               step="0.01"
             />
             <label for="height">Ingrese su altura</label>
           </div>
@@ -97,12 +98,16 @@
                 </p>
             </form>
         </div>
-        <div v-if="errors.length">
-              <ul><strong>
-              <li class="#f44336 red-text" v-for="(error,index) in errors" :key="index">{{ error }}</li>
-              </strong>
-              </ul>
-        </div>
+          <div v-if="errors.length" class="row">
+                    <div class="col s12">
+                        <div class="card-panel red darken-3">
+                            <i class="material-icons left">warning</i>
+                            <span class="white-text center-align" v-for="(error,index) in errors" :key="index">
+                                {{error}} <br>
+                            </span>
+                        </div>
+                    </div>
+                </div>
         <div class="col s12">
             <button @click="checkForm()" class="btn waves-effect waves-light teal" type="submit">
                 Continuar
