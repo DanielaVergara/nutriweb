@@ -3,7 +3,6 @@
     <HeaderMainComponent/>
     <BannerComponent/>
     <br>
-    <SignUpComponent/>
     <AboutComponent/>
     <CommentsComponent/>
     <ContactsComponent/>
@@ -15,7 +14,6 @@
 // @ is an alias to /src
 import HeaderMainComponent from '../components/public-layout/HeaderMain.vue'
 import BannerComponent from '../components/public-layout/Banner.vue'
-import SignUpComponent from '../components/public-layout/SignUp.vue'
 import AboutComponent from '../components/public-layout/About.vue'
 import CommentsComponent from '../components/public-layout/Comments.vue'
 import ContactsComponent from '../components/public-layout/Contacts.vue'
@@ -25,7 +23,6 @@ export default {
   name: 'Home',
   components: {
     HeaderMainComponent,
-    SignUpComponent,
     CommentsComponent,
     ContactsComponent,
     FooterMainComponent,
