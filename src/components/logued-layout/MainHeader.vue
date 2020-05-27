@@ -7,7 +7,7 @@
                   </router-link>
             </div>
             <div class="col s2 m2">
-                ¡Bienvenido <strong>{{user.name}} {{user.lastName}}</strong>!
+                ¡Bienvenido <strong>{{user.names}}</strong>!
             </div>
             <div id="notification" class="col s1 m1">
                 <i class="material-icons">notifications</i>
@@ -23,11 +23,23 @@
 <script lang="ts">
 import {Vue, Component, Prop} from 'vue-property-decorator'
 import { User } from '../../pojo/User'
+import {Route} from 'vue-router'
+import axios from 'axios'
 
 @Component
 export default class MainHeader extends Vue{
     user = new User();
-
+    created(){
+        axios.get('http://localhost:8000/searchPersonByUserId/'+this.$route.params.userId).then(
+            result=>{
+                this.user=result.data;
+            }
+        ).catch(
+            error=>{
+                console.log(error);
+            }
+        )
+    }
 }
 </script>
 

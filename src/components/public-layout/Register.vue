@@ -174,7 +174,7 @@ export default class RegisterComponent extends Vue {
     }
     
     saveUser(){
-        axios.post("http://localhost:8000/createPeople", this.newUser).then(
+        axios.post("http://localhost:8000/createPerson", this.newUser).then(
             result=>{
               if(result.data.code=="0"){
                 this.$router.push({name:"Login"})

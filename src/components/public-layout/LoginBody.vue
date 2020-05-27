@@ -56,6 +56,7 @@
 <script lang="ts">
 import {Vue, Component, Prop} from 'vue-property-decorator'
 import {User} from '../../pojo/User'
+import axios from 'axios';
 
 @Component
 export default class LoginBodyComponent extends Vue{
@@ -63,9 +64,21 @@ export default class LoginBodyComponent extends Vue{
     errors:string[] = [];
 
     loginUp(){
-        console.log("HERE")
         if(this.checkFields()){
-            alert("LOGUEADO");
+            axios.post('http://localhost:8000/login', this.user).then(
+                result=>{
+                    if(result.data.code=="0"){
+                        this.$router.push({name:"Main", params: { userId: result.data.user }});
+                    }
+                    if(result.data.code=="1"){
+                        this.errors.push("Usuario y/o contraseña inválidos");
+                    }
+                }
+            ).catch(
+                error=>{
+                    console.log(error);
+                }
+            );
         }
         
     }
