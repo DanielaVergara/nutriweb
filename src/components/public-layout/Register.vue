@@ -26,10 +26,10 @@
               name="birthdate"
               id="birthdate"
               v-model="newUser.birthdate"
-              placeholder="DD/MM/AAAA"
+              placeholder=""
               class="validate"
             />
-            <label for="birthdate">Ingrese su fecha de nacimiento</label>
+            <label for="birthdate">Fecha de nacimiento (DD/MM/AAAA)</label>
           </div>
         </div>
         <div class="input-field col s3">
@@ -45,7 +45,7 @@
               class="validate"
                step="0.01"
             />
-            <label for="height">Ingrese su altura</label>
+            <label for="height">Altura</label>
           </div>
         </div>
         <div class="input-field col s3">
@@ -60,19 +60,7 @@
               placeholder="En kilos"
               class="validate"
             />
-            <label for="weight">Ingrese su peso</label>
-          </div>
-        </div>
-        <div class="input-field col s12">
-          <div class="input-field line">
-            <i class="material-icons prefix">email</i>
-            <input type="email" v-model="newUser.email" name="email" id="email" class="validate" />
-            <label for="email">Ingrese su correo</label>
-            <span
-              class="helper-text"
-              data-error="Introduzca una dirección de correo válida"
-              data-success
-            ></span>
+            <label for="weight">Peso</label>
           </div>
         </div>
         <div class="col s6 m6">
@@ -98,16 +86,48 @@
                 </p>
             </form>
         </div>
-          <div v-if="errors.length" class="row">
-                    <div class="col s12">
-                        <div class="card-panel red darken-3">
-                            <i class="material-icons left">warning</i>
-                            <span class="white-text center-align" v-for="(error,index) in errors" :key="index">
-                                {{error}} <br>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+        <div class="input-field col s12">
+          <div class="input-field line">
+            <i class="material-icons prefix">email</i>
+            <input type="email" v-model="newUser.email" name="email" id="email" class="validate" />
+            <label for="email">Ingrese su correo</label>
+            <span
+              class="helper-text"
+              data-error="Introduzca una dirección de correo válida"
+              data-success
+            ></span>
+          </div>
+        </div>
+        <div class="input-field col s12">
+          <div class="input-field line">
+            <i class="material-icons prefix">email</i>
+            <input type="password" v-model="newUser.password" name="password" id="password" class="validate" />
+            <label for="password">Ingrese una contraseña</label>
+            <span
+              class="helper-text"
+              data-error="Introduzca una contraseña"
+              data-success
+            ></span>
+          </div>
+        </div>
+        <div class="input-field col s12">
+          <div class="input-field line">
+            <i class="material-icons prefix">email</i>
+            <input type="password" v-model="confirmPass" name="confirmPass" id="confirmPass" class="validate" />
+            <label for="password">Confirme la contraseña</label>
+            <span
+              class="helper-text"
+              data-error="Introduzca una confirmacion de contraseña"
+              data-success
+            ></span>
+          </div>
+        </div>
+        <div class="col s12 m12" v-if="errors.length">
+              <ul><strong>
+              <li class="#f44336 red-text" v-for="(error,index) in errors" :key="index">{{ error }}</li>
+              </strong>
+              </ul>
+        </div>
         <div class="col s12">
             <button @click="checkForm()" class="btn waves-effect waves-light teal" type="submit">
                 Continuar
@@ -123,6 +143,7 @@
 import { Vue, Component, Prop } from "vue-property-decorator";
 import {User} from "../../pojo/User"
 import axios from 'axios'
+import router from '../../router';
 
 @Component
 export default class RegisterComponent extends Vue {
@@ -130,6 +151,7 @@ export default class RegisterComponent extends Vue {
     dLess:boolean=true;
     dMedium:boolean=false;
     dMuch:boolean=false;
+    confirmPass:string="";
     errors: any[] = [];
 
     checkForm() {
@@ -140,6 +162,9 @@ export default class RegisterComponent extends Vue {
         if(!this.newUser.getHeight()){this.addError("La altura es requerida.");}
         if(!this.newUser.getWeight()){ this.addError("El peso es requerido.")}
         if(!this.newUser.getEmail()){ this.addError("El correo  es requerido.")}
+        if(!this.newUser.getPassword()){ this.addError("La contraseña es requerida.")}
+        if(!this.confirmPass){ this.addError("Ingrese la confirmación de la contraseña.")}
+        if(this.newUser.getPassword()!=this.confirmPass){this.addError("Las contraseñas no coinciden.")}
         if (!this.errors.length) {
             this.saveUser();
         }
@@ -149,10 +174,18 @@ export default class RegisterComponent extends Vue {
     }
     
     saveUser(){
-        axios.post("http://localhost:8000/createPerson", this.newUser).then(
-            (response) => { console.log(response) },
-            (error) => { console.log(error) }
-        )
+        axios.post("http://localhost:8000/createPeople", this.newUser).then(
+            result=>{
+              if(result.data.code=="0"){
+                this.$router.push({name:"Login"})
+              }else{
+                alert("ERROR AL REGISTRAR EL USUARIO")
+              }
+            })
+            .catch(
+              error=>{
+                console.log(error)
+            });
     }
 }
 </script>
