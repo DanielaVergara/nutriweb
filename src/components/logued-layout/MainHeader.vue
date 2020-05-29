@@ -30,15 +30,19 @@ import axios from 'axios'
 export default class MainHeader extends Vue{
     user = new User();
     created(){
-        axios.get('http://localhost:8000/searchPersonByUserId/'+this.$route.params.userId).then(
-            result=>{
-                this.user=result.data;
-            }
-        ).catch(
-            error=>{
-                console.log(error);
-            }
-        )
+        if(this.$route.params.userId==undefined){
+            this.$router.push({name:'Home'});
+        }else{
+            axios.get('http://localhost:8000/searchPersonByUserId/'+this.$route.params.userId).then(
+                result=>{
+                    this.user=result.data;
+                }
+            ).catch(
+                error=>{
+                    console.log(error);
+                }
+            )
+        }
     }
 }
 </script>

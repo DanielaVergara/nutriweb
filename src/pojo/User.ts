@@ -1,4 +1,5 @@
 export class User{
+    private id:number=0;
     private email:string="";
     private password:string="";
     private names:string="";
@@ -12,6 +13,10 @@ export class User{
         this.password="";
         this.names="";
         this.lastnames="";
+    }
+
+    getId(){
+        return this.id;
     }
 
     getEmail(){
@@ -42,6 +47,9 @@ export class User{
         return this.lastnames;
     }
     
+    setId(id:number){
+        this.id=id;
+    }
 
     setEmail(email:string){
         this.email=email;
